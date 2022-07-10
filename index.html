@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Room homepage">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | Room homepage</title>
 
@@ -13,20 +17,36 @@
 </head>
 
 <body>
-    Home
-    Shop
-    About
-    Contact
+    <header class="primary-header flex">
+        <picture class="img-hero">
+            <source media="(min-width: 615px)" srcset="./images/desktop-image-hero-1.jpg">
+            <img src="./images/mobile-image-hero-1.jpg" alt="a room">
+        </picture>
+        <img src="./images/logo.svg" alt="logo" class="logo">
+        <button onclick="displayMenu()" class="mobile-nav-toggle" data-visible="false" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only" role="presentation">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
+                <li><a class="active" href="#">home</a>
+                <li><a class="" href="#">shop</a>
+                <li><a class="" href="#">about</a>
+                <li><a class="" href="#">contact</a>
+            </ul>
+        </nav>
+    </header>
 
-    Discover innovative ways to decorate
+    <main>
+    <section>
 
-    We provide unmatched quality, comfort, and style for property owners across the country.
-    Our experts combine form and function in bringing your vision to life. Create a room in your
-    own style with our collection and make your property a reflection of you and what you love.
-
-    Shop now
-
-    We are available all across the globe
+        <h1>Discover innovative ways to decorate</h1>
+        
+        <p>We provide unmatched quality, comfort, and style for property owners across the country.
+            Our experts combine form and function in bringing your vision to life. Create a room in your
+            own style with our collection and make your property a reflection of you and what you love.</p>
+            
+        <h2>Shop now</h2>
+            
+    </section>
+    <!-- We are available all across the globe
 
     With stores all over the world, it's easy for you to find furniture for your home or place of business.
     Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
@@ -40,19 +60,19 @@
     to ensure that every product is made as perfect and as consistent as possible. With three decades of
     experience in this industry, we understand what customers want for their home and office.
 
-    Shop now
+    Shop now -->
 
-    About our furniture
+    <h3>About our furniture</h3>
 
-    Our multifunctional collection blends design and function to suit your individual taste.
+    <p>Our multifunctional collection blends design and function to suit your individual taste.
     Make each room unique, or pick a cohesive theme that best express your interests and what
     inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-    or anything in between. Product specialists are available to help you create your dream space.
-
-    <div class="attribution">
+    or anything in between. Product specialists are available to help you create your dream space.</p>
+    </main>
+    <footer class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div>
+        Coded by <a href="https://github.com/CarvalhoVincent" target="_blank">Vincent CARVALHO</a>.
+    </footer>
     <script src="index.js"></script>
 </body>
 
