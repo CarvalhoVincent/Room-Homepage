@@ -241,7 +241,7 @@ select {
     margin-top: 4.5rem;
 }
 
-.about > h3 {
+.about > h2 {
     font-weight: 700;
     font-size: 14px;
     line-height: 22px;
@@ -377,7 +377,7 @@ select {
         height: auto;
     }
     
-    .about > h3 {
+    .about > h2 {
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
