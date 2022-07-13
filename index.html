@@ -7,68 +7,72 @@
     <meta name="description" content="Room homepage">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | Room homepage</title>
-
-
 </head>
 
 <body>
-    <header class="primary-header flex">
-        <picture class="img-hero">
-            <source media="(min-width: 615px)" srcset="./images/desktop-image-hero-1.jpg">
-            <img src="./images/mobile-image-hero-1.jpg" alt="a room">
-        </picture>
-        <img src="./images/logo.svg" alt="logo" class="logo">
-        <button onclick="displayMenu()" class="mobile-nav-toggle" data-visible="false" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only" role="presentation">Menu</span></button>
-        <nav>
-            <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
-                <li><a class="active" href="#">home</a>
-                <li><a class="" href="#">shop</a>
-                <li><a class="" href="#">about</a>
-                <li><a class="" href="#">contact</a>
-            </ul>
-        </nav>
-    </header>
+    <section class="container flex">
 
-    <main>
-    <section>
+        <header class="primary-header flex">
+            <img src="./images/logo.svg" alt="logo" class="logo">
+            <button onclick="displayMenu()" class="mobile-nav-toggle" data-visible="false"
+                aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only"
+                    role="presentation">Menu</span></button>
+            <nav>
+                <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
+                    <li><a class="active" href="#">home</a>
+                    <li><a class="" href="#">shop</a>
+                    <li><a class="" href="#">about</a>
+                    <li><a class="" href="#">contact</a>
+                </ul>
+            </nav>
+        </header>
+        <main class="discover">
 
-        <h1>Discover innovative ways to decorate</h1>
-        
-        <p>We provide unmatched quality, comfort, and style for property owners across the country.
-            Our experts combine form and function in bringing your vision to life. Create a room in your
-            own style with our collection and make your property a reflection of you and what you love.</p>
+            <h1>Discover innovative ways to decorate</h1>
+
+            <p class="text-gray">We provide unmatched quality, comfort, and style for property owners across the country.
+                Our experts combine form and function in bringing your vision to life. Create a room in your
+                own style with our collection and make your property a reflection of you and what you love.</p>
+
+            <a class="uppercase" href="#">Shop now<img src="./images/icon-arrow.svg" alt="icon-arrow"></a>
             
-        <h2>Shop now</h2>
-            
+
+        </main>
     </section>
     <!-- We are available all across the globe
 
-    With stores all over the world, it's easy for you to find furniture for your home or place of business.
-    Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
-    store locator. Any questions? Don't hesitate to contact us today.
+With stores all over the world, it's easy for you to find furniture for your home or place of business.
+Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+store locator. Any questions? Don't hesitate to contact us today.
 
-    Shop now
+Shop now
 
-    Manufactured with the best materials
+Manufactured with the best materials
 
-    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
-    to ensure that every product is made as perfect and as consistent as possible. With three decades of
-    experience in this industry, we understand what customers want for their home and office.
+Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+to ensure that every product is made as perfect and as consistent as possible. With three decades of
+experience in this industry, we understand what customers want for their home and office.
 
-    Shop now -->
+Shop now -->
 
-    <h3>About our furniture</h3>
 
-    <p>Our multifunctional collection blends design and function to suit your individual taste.
-    Make each room unique, or pick a cohesive theme that best express your interests and what
-    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-    or anything in between. Product specialists are available to help you create your dream space.</p>
-    </main>
+    <section class="bottom-item flex">
+        <img class="image-about-dark" src="./images/image-about-dark.jpg" alt="room in the dark">
+        <div class="about">
+            <h3 class="uppercase">About our furniture</h3>
+            <p class="text-gray">Our multifunctional collection blends design and function to suit your individual taste.
+                Make each room unique, or pick a cohesive theme that best express your interests and what
+                inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                or anything in between. Product specialists are available to help you create your dream space.</p>
+        </div>
+        <img class="image-about-light" src="./images/image-about-light.jpg" alt="chair with light">
+    </section>
+
     <footer class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://github.com/CarvalhoVincent" target="_blank">Vincent CARVALHO</a>.

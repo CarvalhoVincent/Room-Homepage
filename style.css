@@ -124,12 +124,6 @@ select {
 
 .uppercase { text-transform: uppercase; }
 
-.fs-900 { font-size: var(--fs-900); }
-.fs-800 { font-size: var(--fs-800); }
-.fs-700 { font-size: var(--fs-700); }
-.fs-600 { font-size: var(--fs-600); }
-.fs-500 { font-size: var(--fs-500); }
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -141,20 +135,24 @@ select {
 }
 
 /* primary header */
+.container {
+    flex-direction: column;
+}
 
 .primary-header {
     justify-content: space-between;
+    background: url(./images/mobile-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    height: 360px;
 }
 
 .logo {
-    z-index: 10;
-    padding-top: 3rem;
-}
-
-.img-hero > img {
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
+    height: 13.06px;
+    width: 61.72px;
+    margin-inline: auto;
+    margin-top: 3rem;
 }
 
 .primary-navigation {
@@ -169,22 +167,91 @@ select {
 .primary-navigation li {
     padding: 0;
     padding-bottom: .5rem;
-
 }
 
 .mobile-nav-toggle {
     display: none;
 }
 
+.discover {
+    padding-inline: 2rem;
+}
+
+.discover > h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 37px;
+    letter-spacing: -1.66667px; 
+    margin-top: 3.75rem;   
+}
+
+.discover > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.333333px;
+    margin-top: 1rem;
+    margin-bottom: 2.5625rem;
+}
+
+.discover > a {
+    display: inline;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 12.5px;
+    text-decoration: none;
+    color: hsl( var(--clr-black) );
+}
+
+.discover > a img {
+    display: inline;
+}
+
+.bottom-item {
+    flex-direction: column;
+}
+
+.image-about-dark {
+    margin-top: 4.5rem;
+}
+
+.about > h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: 5.83333px;  
+    margin-top: 3.06rem; 
+    padding-inline: 2rem;
+
+}
+
+.about > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.333333px;
+    margin-top: 1rem;
+    padding-inline: 2rem;
+}
+
+.image-about-light {
+    margin-top: 2.56rem;
+    margin-bottom: 2rem;
+}
+
+
+
 @media (max-width: 340px) {
     .primary-navigation {
         flex-direction: column;
-        padding-bottom: 10rem;
+        padding-bottom: 11rem;
         width: 10rem;
     }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 720px) {
     .primary-navigation {
         --underline-gap: .5rem;
         position: fixed;
@@ -226,24 +293,29 @@ select {
     }
 }
 
-@media (min-width: 615px) {
+
+@media (min-width: 720px) {
+    .container {
+        flex-direction: row;
+        width: 100vw;
+    }
+
     .primary-header {
-        justify-content: flex-start;
+        width: 58%;
+        height: 534px;
+        background: url(./images/desktop-image-hero-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
     }
 
     .logo {
         position: absolute;
-        left: 2rem;
-    }
-
-    .img-hero > img {
-        position: absolute;
-        z-index: -1;
-        width: 58%;
+        left: 4rem;
     }
 
     .primary-navigation {
-        padding-left: 8rem;
+        padding-left: 11rem;
         background: transparent;
         --gap: 1rem;
     }
@@ -253,22 +325,53 @@ select {
         text-decoration: none;
         padding-bottom: 2rem;
     }
-}
 
-@media (min-width: 45em) {
-
-    .logo {
-        position: absolute;
-        left: 4rem;
+    .discover {
+        padding-inline: 3rem;
+        padding-top: 0;
     }
 
-    .primary-navigation {
-        padding-left: 11.375rem;
-        background: transparent;
-        --gap: 1rem;
+    .bottom-item {
+        padding-inline: 0;
+        flex-direction: row;
+    }
+
+    .image-about-dark {
+        margin-top: 0;
+        height: auto;
+    }
+    
+    .about > h3 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: justify;
+        letter-spacing: 5.83333px;  
+        margin-top: 3.06rem;  
+    }
+    
+    .about > p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.333333px;
+        min-width: 400px;
+        margin-top: 1rem;
+    }
+    
+    .image-about-light {
+        margin-top: 0;
+        margin-bottom: 0;
+        height: auto;
     }
 }
 
+@media (min-width: 1000px) {
+    .discover {
+        padding-inline: 6.25rem;
+        width: 600px;
+    }
+}
 
 .underline-indicators > * {
     cursor: pointer;
@@ -276,7 +379,6 @@ select {
     border: 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
     background: transparent;
-
 }
 
 .underline-indicators > *:hover,
